@@ -4,9 +4,9 @@ public class Bibliotheque {
     private ArrayList<Livre> livres;
 
     public Bibliotheque() {
-        livres = new ArrayList<livre>();
+        livres = new ArrayList<Livre>();
     }
-    public void ajouterLivre(string titre, string auteur, int identifiant) {
+    public void ajouterLivre(String titre, String auteur, int identifiant) {
         if (chercherLivre(identifiant) != null) {
             System.out.println("Erreur: un livre avec cet identifiant existe déjà");
             return;

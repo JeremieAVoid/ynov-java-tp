@@ -1,4 +1,4 @@
-import java.util.Scanner
+import java.util.Scanner;
 
 public class Main {
     public static void Main(String[] args) {
@@ -40,14 +40,14 @@ public class Main {
                         break;
 
                     case 3:
-                        System.out.print("Identifiant du livre a emprunter: ");
+                        System.out.print("Identifiant du livre à emprunter: ");
                         int idEmprunt = Integer.parseInt(scanner.nextLine());
 
                         bibliotheque.emprunterLivre(idEmprunt);
                         break;
 
                     case 4:
-                        System.out.print("Identifiant du livre a retourner: ");
+                        System.out.print("Identifiant du livre à retourner: ");
                         int idRetour = Integer.parseInt(scanner.nextLine());
 
                         bibliotheque.retournerLivre(idRetour);
