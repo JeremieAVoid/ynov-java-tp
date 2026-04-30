@@ -322,3 +322,4 @@ Ce projet permet de mettre en pratique :
 ## Auteur
 
 Projet realise dans le cadre d'un TP Java sur la gestion d'une bibliotheque.
+By Jeremy, Erwan, Jules
