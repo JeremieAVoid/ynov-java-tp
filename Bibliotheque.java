@@ -11,5 +11,18 @@ public class Bibliotheque {
             System.out.println("Erreur: un livre avec cet identifiant existe déjà");
             return;
         }
+        Livre livre = new Livre(titre, auteur, identifiant);
+        livres.add(livre);
+        System.out.println("livre ajouté avec succès");
     }
+    public void afficherLivres() {
+        if (livres.isEmpty()) {
+            System.out.println("Aucun livre dans la bibliothèque");
+            return;
+        }
+        for (Livre livre : livres) {
+            livre.afficherLivre();
+        }
+    }
+    
 }
