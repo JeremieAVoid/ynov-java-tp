@@ -4,71 +4,68 @@ public class Bibliotheque {
     private ArrayList<Livre> livres;
 
     public Bibliotheque() {
-        livres = new ArrayList<Livre>();
+        livres = new ArrayList<>();
     }
+
     public void ajouterLivre(String titre, String auteur, int identifiant) {
         if (chercherLivre(identifiant) != null) {
-            System.out.println("Erreur: un livre avec cet identifiant existe déjà");
+            System.out.println(ConsoleColors.RED + "Erreur : un livre avec cet identifiant existe déjà." + ConsoleColors.RESET);
             return;
         }
         Livre livre = new Livre(titre, auteur, identifiant);
         livres.add(livre);
-        System.out.println("livre ajouté avec succès");
+        System.out.println(ConsoleColors.GREEN + "Livre ajouté avec succès." + ConsoleColors.RESET);
     }
+
     public void afficherLivres() {
         if (livres.isEmpty()) {
             System.out.println();
-            System.out.println("==============================================");
-            System.out.println("Aucun livre dans la bibliotheque.");
-            System.out.println("==============================================");
-        return;
+            System.out.println(ConsoleColors.CYAN + "==============================================" + ConsoleColors.RESET);
+            System.out.println(ConsoleColors.YELLOW + "Aucun livre dans la bibliothèque." + ConsoleColors.RESET);
+            System.out.println(ConsoleColors.CYAN + "==============================================" + ConsoleColors.RESET);
+            return;
         }
 
         System.out.println();
-        System.out.println("==========================================================================");
-        System.out.println("                         LISTE DES LIVRES");
-        System.out.println("==========================================================================");
-        System.out.printf("| %-5s | %-25s | %-20s | %-12s |\n", "ID", "Titre", "Auteur", "Etat");
-        System.out.println("--------------------------------------------------------------------------");
+        System.out.println(ConsoleColors.CYAN + ConsoleColors.BOLD + "                         LISTE DES LIVRES " + ConsoleColors.RESET);
+        System.out.println(ConsoleColors.CYAN + "==========================================================================" + ConsoleColors.RESET);
+        System.out.printf(ConsoleColors.BOLD + "| %-5s | %-25s | %-20s | %-12s |" + ConsoleColors.RESET + "\n", 
+                "ID", "Titre", "Auteur", "État");
+        System.out.println(ConsoleColors.CYAN + "--------------------------------------------------------------------------" + ConsoleColors.RESET);
 
         for (Livre livre : livres) {
             livre.afficherLivre();
         }
-        System.out.println("==========================================================================");
+        System.out.println(ConsoleColors.CYAN + "==========================================================================" + ConsoleColors.RESET);
         System.out.println("Nombre total de livres : " + livres.size());
     }
+
     public void emprunterLivre(int identifiant) {
         Livre livre = chercherLivre(identifiant);
-
         if (livre == null) {
-            System.out.println("Erreur: livre introuvable.");
+            System.out.println(ConsoleColors.RED + "Erreur : livre introuvable." + ConsoleColors.RESET);
             return;
         }
-
         if (!livre.isDisponible()) {
-            System.out.println("Erreur: ce livre est déjà emprunté.");
+            System.out.println(ConsoleColors.RED + "Erreur : ce livre est déjà emprunté." + ConsoleColors.RESET);
             return;
         }
-
         livre.emprunter();
-        System.out.println("Livre emprunté avec succès.");
+        System.out.println(ConsoleColors.GREEN + "Livre emprunté avec succès." + ConsoleColors.RESET);
     }
 
     public void retournerLivre(int identifiant) {
         Livre livre = chercherLivre(identifiant);
-
         if (livre == null) {
-            System.out.println("Erreur: livre introuvable.");
+            System.out.println(ConsoleColors.RED + "Erreur : livre introuvable." + ConsoleColors.RESET);
             return;
         }
-
         if (livre.isDisponible()) {
-            System.out.println("Erreur: ce livre est déjà disponible.");
+            System.out.println(ConsoleColors.RED + "Erreur : ce livre est déjà disponible." + ConsoleColors.RESET);
             return;
         }
-
         livre.retourner();
-        System.out.println("Livre retourné avec succes.");
+        System.out.println(ConsoleColors.GREEN + "Livre retourné avec succès." + ConsoleColors.RESET);
     }
 
     public Livre chercherLivre(int identifiant) {
@@ -77,7 +74,6 @@ public class Bibliotheque {
                 return livre;
             }
         }
-
         return null;
     }
 }
