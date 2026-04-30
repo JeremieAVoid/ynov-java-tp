@@ -24,5 +24,11 @@ public class livre {
         return disponible;
     }
 
-    
+    public void emprunter() {
+        if (disponible) {
+            disponible = false;
+        } else {
+            System.out.println("Le livre n'est pas disponible pour emprunt.");
+        }
+    }
 }
