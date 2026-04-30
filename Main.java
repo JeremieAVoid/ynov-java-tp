@@ -16,6 +16,28 @@ public class Main {
             System.out.println("4. Retourner un livre");
             System.out.println("5. Quitter");
             System.out.println("Votre choix : ");
+
+
+            try {
+                choix = Integer.parseInt(scanner.nextLine());
+
+                switch (choix) {
+                    case 1:
+                        System.out.print("Titre du livre: ");
+                        String titre = scanner.nextLine();
+
+                        System.out.print("Auteur du livre: ");
+                        String auteur = scanner.nextLine();
+
+                        System.out.println("Identifiant du livre: ");
+                        String idAjout = Integer.parseInt(scanner.nextLine());
+
+                        bibliotheque.ajouterLivre(titre, auteur, idAjout);
+                        break;
+
+                    case 2:
+                }
+            }
         }
     }
 }
