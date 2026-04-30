@@ -31,4 +31,12 @@ public class livre {
             System.out.println("Le livre n'est pas disponible pour emprunt.");
         }
     }
+
+    public void retourner() {
+        if (disponible)  {
+            System.out.println("Le livre est déjà disponible.");
+        } else {
+            disponible = true;
+        }
+    }
 }
