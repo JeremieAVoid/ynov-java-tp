@@ -1,0 +1,21 @@
+import java.util.Scanner
+
+public class Main {
+    public static void Main(String[] args) {
+         Scanner scanner = new Scanner(System.in);
+        Bibliotheque bibliotheque = new Bibliotheque();
+
+        int choix = 0;
+
+        while (choix != 5) {
+            System.out.println();
+            System.out.println("===== MENU BIBLIOTHEQUE =====");
+            System.out.println("1. Ajouter un livre");
+            System.out.println("2. Afficher les livres");
+            System.out.println("3. Emprunter un livre");
+            System.out.println("4. Retourner un livre");
+            System.out.println("5. Quitter");
+            System.out.println("Votre choix : ");
+        }
+    }
+}
