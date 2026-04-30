@@ -25,20 +25,14 @@ public class Livre {
     }
 
     public void emprunter() {
-        if (disponible) {
             disponible = false;
-        } else {
-            System.out.println("Le livre n'est pas disponible pour emprunt.");
-        }
     }
 
+
     public void retourner() {
-        if (disponible)  {
-            System.out.println("Le livre est déjà disponible.");
-        } else {
             disponible = true;
-        }
     }
+
 
     public void afficherLivre() {
         System.out.println("Titre: " + titre);
