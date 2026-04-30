@@ -132,12 +132,6 @@ Se placer dans le dossier du projet :
 cd chemin/vers/ynov-java-tp
 ```
 
-Exemple sous Windows PowerShell :
-
-```powershell
-cd "C:\Users\theju\OneDrive\Bureau\B1 INFO NANTES YNOV CAMPUS\ynov-java-tp"
-```
-
 ### 2. Supprimer les anciens fichiers compiles
 
 Cette etape est utile si des fichiers `.class` existent deja.
@@ -182,7 +176,7 @@ Le menu de l'application s'affiche ensuite dans la console.
 ### Windows PowerShell
 
 ```powershell
-cd "C:\Users\theju\OneDrive\Bureau\B1 INFO NANTES YNOV CAMPUS\ynov-java-tp"
+cd "chemin\vers\ynov-java-tp"
 del *.class
 javac *.java
 java Main
