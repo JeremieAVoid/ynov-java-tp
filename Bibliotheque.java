@@ -24,5 +24,17 @@ public class Bibliotheque {
             livre.afficherLivre();
         }
     }
+    public void emprunterLivre(int identifiant) {
+    Livre livre = chercherLivre(identifiant);
+
+    if (livre == null) {
+        System.out.println("Erreur: livre introuvable.");
+        return;
+        }
+
+    if (livre.isDisponible()) {
+        System.out.println("Erreur: ce livre est deja disponible.");
+        return;
+    }
     
 }
