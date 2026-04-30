@@ -33,7 +33,6 @@ public class Bibliotheque {
 
         for (Livre livre : livres) {
             livre.afficherLivre();
-            System.out.println("--------------------------------------------------------------------------");
         }
         System.out.println("==========================================================================");
         System.out.println("Nombre total de livres : " + livres.size());
