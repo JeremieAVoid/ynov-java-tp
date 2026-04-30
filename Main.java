@@ -30,12 +30,16 @@ public class Main {
                         String auteur = scanner.nextLine();
 
                         System.out.println("Identifiant du livre: ");
-                        String idAjout = Integer.parseInt(scanner.nextLine());
+                        int idAjout = Integer.parseInt(scanner.nextLine());
 
                         bibliotheque.ajouterLivre(titre, auteur, idAjout);
                         break;
 
                     case 2:
+                        bibliotheque.afficherLivres();
+                        break;
+
+                    case 3:
                 }
             }
         }
