@@ -17,12 +17,25 @@ public class Bibliotheque {
     }
     public void afficherLivres() {
         if (livres.isEmpty()) {
-            System.out.println("Aucun livre dans la bibliothèque");
-            return;
+            System.out.println();
+            System.out.println("==============================================");
+            System.out.println("Aucun livre dans la bibliotheque.");
+            System.out.println("==============================================");
+        return;
         }
+
+        System.out.println();
+        System.out.println("==========================================================================");
+        System.out.println("                         LISTE DES LIVRES");
+        System.out.println("==========================================================================");
+        System.out.printf("| %-5s | %-25s | %-20s | %-12s |\n", "ID", "Titre", "Auteur", "Etat");
+        System.out.println("--------------------------------------------------------------------------");
+
         for (Livre livre : livres) {
             livre.afficherLivre();
         }
+        System.out.println("==========================================================================");
+        System.out.println("Nombre total de livres : " + livres.size());
     }
     public void emprunterLivre(int identifiant) {
         Livre livre = chercherLivre(identifiant);
