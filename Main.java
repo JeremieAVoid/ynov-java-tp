@@ -61,7 +61,10 @@ public class Main {
                         System.out.println("Erreur: choix invalide.");
                     break;
                 }
+            }catch (Exception e) {
+                System.out.println("Erreur: saisie invalide.");
             }
         }
+        scanner.close();
     }
 }
