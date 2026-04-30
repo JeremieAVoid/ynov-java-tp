@@ -45,11 +45,16 @@ public class Main {
 
                         bibliotheque.emprunterLivre(idEmprunt);
                         break;
+
                     case 4:
                         System.out.print("Identifiant du livre a retourner: ");
                         int idRetour = Integer.parseInt(scanner.nextLine());
 
                         bibliotheque.retournerLivre(idRetour);
+                        break;
+
+                    case 5:
+                        System.out.println("Au revoir !");
                         break;
                 }
             }
