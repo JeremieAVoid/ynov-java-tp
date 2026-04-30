@@ -56,6 +56,10 @@ public class Main {
                     case 5:
                         System.out.println("Au revoir !");
                         break;
+
+                    default:
+                        System.out.println("Erreur: choix invalide.");
+                    break;
                 }
             }
         }
