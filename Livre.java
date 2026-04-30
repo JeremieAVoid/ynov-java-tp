@@ -35,9 +35,12 @@ public class Livre {
 
 
     public void afficherLivre() {
-        System.out.println("Titre: " + titre);
-        System.out.println("Auteur: " + auteur);
-        System.out.println("Identifiant: " + identifiant);
-        System.out.println(disponible ? "Disponible" : "Emprunté");
+        String etat;
+        if (disponible) {
+            etat = "Disponible";
+        } else {
+            etat = "Emprunte";
+        }
+        System.out.printf("| %-5d | %-25s | %-20s | %-12s |\n", identifiant, titre, auteur, etat);
     }
 }
