@@ -40,6 +40,13 @@ public class Main {
                         break;
 
                     case 3:
+                        System.out.print("Identifiant du livre a emprunter: ");
+                        int idEmprunt = Integer.parseInt(scanner.nextLine());
+
+                        bibliotheque.emprunterLivre(idEmprunt);
+                        break;
+                    case 4:
+                        
                 }
             }
         }
