@@ -33,8 +33,20 @@ public class Bibliotheque {
         }
 
     if (livre.isDisponible()) {
-        System.out.println("Erreur: ce livre est deja disponible.");
+        System.out.println("Erreur: ce livre est déjà disponible.");
         return;
     }
-    
+    livre.retourner();
+        System.out.println("Livre retourné avec succès.");
+    }
+
+    public Livre chercherLivre(int identifiant) {
+        for (Livre livre : livres) {
+            if (livre.getIdentifiant() == identifiant) {
+                return livre;
+            }
+        }
+
+        return null;
+    }
 }
