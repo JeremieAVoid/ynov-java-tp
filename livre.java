@@ -4,7 +4,7 @@ public class livre {
     private int identifiant;
     private boolean disponible;
 
-    public void Livre(String titre, String auteur, int identifiant) {
+    public Livre(String titre, String auteur, int identifiant) {
         this.titre = titre;
         this.auteur = auteur;
         this.identifiant = identifiant;
