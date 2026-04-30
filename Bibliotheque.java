@@ -32,12 +32,30 @@ public class Bibliotheque {
             return;
         }
 
+        if (!livre.isDisponible()) {
+            System.out.println("Erreur: ce livre est déjà emprunté.");
+            return;
+        }
+
+        livre.emprunter();
+        System.out.println("Livre emprunté avec succès.");
+    }
+
+    public void retournerLivre(int identifiant) {
+        Livre livre = chercherLivre(identifiant);
+
+        if (livre == null) {
+            System.out.println("Erreur: livre introuvable.");
+            return;
+        }
+
         if (livre.isDisponible()) {
             System.out.println("Erreur: ce livre est déjà disponible.");
             return;
         }
-        livre.emprunter();
-        System.out.println("Livre emprunté avec succès.");
+
+        livre.retourner();
+        System.out.println("Livre retourné avec succes.");
     }
 
     public Livre chercherLivre(int identifiant) {
