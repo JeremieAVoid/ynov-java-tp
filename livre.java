@@ -39,4 +39,11 @@ public class livre {
             disponible = true;
         }
     }
+
+    public void afficherLivre() {
+        System.out.println("Titre: " + titre);
+        System.out.println("Auteur: " + auteur);
+        System.out.println("Identifiant: " + identifiant);
+        System.out.println(disponible ? "Disponible" : "Emprunté");
+    }
 }
