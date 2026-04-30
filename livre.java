@@ -10,4 +10,19 @@ public class livre {
         this.identifiant = identifiant;
         this.disponible = true;
     }
+
+    public String getTitre() {
+        return titre;
+    }
+    public String getAuteur() {
+        return auteur;
+    }
+    public int getIdentifiant() {
+        return identifiant;
+    }
+    public boolean isDisponible() {
+        return disponible;
+    }
+
+    
 }
